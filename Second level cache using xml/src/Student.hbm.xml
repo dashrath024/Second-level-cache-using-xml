@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+<class name="com.dashzin.hibernate.Student" table="Stud1">
+    <cache usage="read-only"/>
+	<composite-id  name="id" class="com.dashzin.hibernate.SID">
+	<key-property name="sid" column="sid"/>
+	<key-property name="name" column="name"/>
+	</composite-id>
+	
+    <property name="email" type="string"/>
+	<property name="phone" type="long"/>
+
+
+</class>
+
+
+</hibernate-mapping>
